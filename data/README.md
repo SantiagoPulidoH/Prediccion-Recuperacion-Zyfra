@@ -1,14 +1,14 @@
-# Datos del proyecto
+# 📂 Data Folder
 
-Este repositorio no incluye los datos por motivos de licencia y tamaño.
+This folder is used to store datasets for the Gold Recovery Prediction project.  
+Due to licensing and size restrictions, the raw data is **not included in this repository**.  
 
-## Cómo obtenerlos
-- Origen: dataset provisto en la plataforma TripleTen (proceso de concentración de oro).  
-- Archivos esperados: mediciones de entradas, salidas, concentraciones y recuperaciones.  
+### How to get the dataset
+1. Download the dataset from the TripleTen platform.  
+2. Save the file as `gold_recovery_zyfra.csv` inside this folder.  
 
-## Pasos
-1. Descarga los datos desde la plataforma TripleTen.  
-2. Guarda los archivos en esta carpeta (`data/`).  
-3. Verifica que los nombres de columnas coincidan con los utilizados en el notebook.
+### Expected file structure
+- `gold_recovery_zyfra.csv` → Industrial dataset with ~16,000 records.  
 
-> El notebook incluye todos los resultados y gráficas guardadas, por lo que se puede revisar sin necesidad de ejecutar.
+### Notes
+- Do not upload raw datasets to GitHub (to comply with data privacy and repository size limits).  

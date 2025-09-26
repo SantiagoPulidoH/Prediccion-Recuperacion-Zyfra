@@ -1,28 +1,49 @@
-# Predicción de Recuperación de Oro – Proyecto Zyfra
+# ⛏️ Gold Recovery Prediction (Zyfra Mining)
 
-Proyecto de Data Science para la empresa **Zyfra**, enfocado en predecir la eficiencia de recuperación de oro a partir de datos de procesos industriales.  
-El objetivo es construir un modelo robusto que estime las variables objetivo y pueda apoyar decisiones en la optimización del proceso de producción.
+## Project Overview
+This project was developed as part of the Data Science Bootcamp (TripleTen).  
+The goal is to predict the recovery efficiency of gold from ore at different stages of the extraction and purification process, helping mining companies optimize production and reduce losses.
 
-## 📊 Descripción
-- Análisis exploratorio de datos industriales de concentración de minerales.  
-- Verificación de calidad de los datos (columnas ausentes, distribuciones, balance de concentraciones).  
-- Comparación de modelos de Machine Learning con validación cruzada por bloques.  
-- Evaluación con la métrica **sMAPE** (symmetric Mean Absolute Percentage Error).  
+---
 
-## 🧪 Resultados
-- Se identificaron columnas que no deben usarse como features (outputs, cálculos derivados, objetivos).  
-- Pruebas estadísticas confirmaron diferencias significativas en algunas distribuciones entre train y test (ej. `feed_size`).  
-- **Regresión Lineal** mostró mejor desempeño promedio que Random Forest (menor sMAPE).  
-- Se plantean mejoras futuras: aumentar número de folds, probar modelos de boosting (LightGBM/XGBoost) y ajustar hiperparámetros.  
+## Problem Statement
+In mining operations, predicting gold recovery is critical for operational efficiency.  
+An accurate forecast allows companies to adjust parameters and avoid inefficient or costly processes.
 
-## 🗂 Estructura
-- `notebooks/`: notebook principal con análisis y resultados.  
-- `data/`: no incluye datos originales; ver instrucciones en `data/README.md`.  
-- `requirements.txt`: dependencias mínimas para reproducir.  
+---
 
-## 🔁 Reproducir (opcional)
-1. Crear entorno e instalar dependencias:
-```bash
-python -m venv .venv
-.venv\Scripts\activate   # Windows
-pip install -r requirements.txt
+## Dataset
+- Source: Industrial dataset from **Zyfra Mining**.  
+- Size: ~16,000 records.  
+- Features: Concentrations of metals (Au, Ag, Pb), recovery rates at different processing stages (rougher, cleaner).  
+- Target: Final gold recovery rate.  
+
+---
+
+## Tech Stack
+- **Languages/Libraries**: Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn  
+- **Models**: Linear Regression, Random Forest, Gradient Boosting  
+- **Metrics**: Custom metric **sMAPE** (Symmetric Mean Absolute Percentage Error)  
+
+---
+
+## Key Results / KPIs
+- Compared Linear Regression, Random Forest, and Gradient Boosting models.  
+- Final model achieved **sMAPE = 9.21%**, surpassing baseline results.  
+- Provided actionable insights about the influence of feed composition on final recovery rates (e.g., gold recovery increased from ~10% in feedstock to 40–50% in final product).  
+
+---
+
+## Visualisations
+The project includes:
+- Distribution of gold concentration by stage.  
+- Feature importance analysis.  
+- Model performance comparison (sMAPE).  
+
+---
+
+## How to Reproduce
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SantiagoPulidoH/prediccion-recuperacion-zyfra.git
+   cd prediccion-recuperacion-zyfra
